@@ -57,3 +57,29 @@ $ vagrant halt
 ```bash
 $ vagrant Destroy
 ```
+
+## Setup mysql user
+
+```bash
+$ vagrant ssh
+```
+
+```bash
+$ mysql -u root -p
+```
+
+[root_password] is in the file ../ansible/group_vars/vagrant
+
+```bash
+$ GRANT ALL PRIVILEGES ON *.* TO '[app_user]'@'localhost' IDENTIFIED BY '[app_password]';
+```
+
+[app_user] and [app_password] is in the file ../ansible/group_vars/vagrant
+
+```bash
+$ FLUSH PRIVILEGES;
+```
+
+```bash
+$ exit
+```

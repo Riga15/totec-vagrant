@@ -74,6 +74,10 @@ $ mysql -u root -p
 $ GRANT ALL PRIVILEGES ON *.* TO '[app_user]'@'localhost' IDENTIFIED BY '[app_password]';
 ```
 
+```bash
+$ GRANT ALL PRIVILEGES ON *.* TO '[app_user]'@'%' IDENTIFIED BY '[app_password]';
+```
+
 [app_user] and [app_password] is in the file ../ansible/group_vars/vagrant
 
 ```bash
